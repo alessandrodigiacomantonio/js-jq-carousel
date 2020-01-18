@@ -11,7 +11,6 @@ $(document).ready(function() {
   $('html').on('keydown', function(event) {
     if (event.which == 39) activeNext();
     if (event.which == 37) activePrev();
-    console.log(event.which);
   });
 });
 
