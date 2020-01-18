@@ -1,3 +1,4 @@
+// ↓ script per visualizzare l'immagine successiva dello slider ↓
 $('.next').on('click', function() {
   if ($('.nav .active').hasClass('last')) {
     $('.nav .last').toggleClass('active');
@@ -11,6 +12,8 @@ $('.next').on('click', function() {
     $('.images .active').first().toggleClass('active');
   }
 });
+
+// ↓ script per visualizzare l'immagine precedente dello slider ↓
 $('.prev').on('click', function() {
   if ($('.nav .active').hasClass('first')) {
     $('.nav .first').toggleClass('active');
