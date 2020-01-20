@@ -4,12 +4,12 @@ $(document).ready(function() {
 
   // ↓ slider: freccia destra ↓
   $('.next').on('click', function() {
-    activeNext();
+    activeNextImg();
   });
 
   // ↓ slider: freccia sinistra ↓
   $('.prev').on('click', function() {
-    activePrev();
+    activePrevImg();
   });
 
   // ↓ slider: cerchi nella navbar ↓
@@ -64,8 +64,8 @@ function activeSelectedCircle(circleClicked) {
     $('.nav > *').removeClass('active');
     circleClicked.addClass('active');
     var i = 0;
-    var index = 0;
-    while (i < $('.nav > *').length) {
+    var index = -1;
+    while (i < $('.nav > *').length && index!=i) {
       if ($('.nav > *:nth-of-type('+(i+1)+')').hasClass('active')) index = i+1;
       i++;
     }
